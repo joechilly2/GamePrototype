@@ -21,7 +21,7 @@ public class EnemyHealthManager : MonoBehaviour {
 	}
 
 
-	public void HurtPlayer(int damageToGive){
+	public void HurtEnemy(int damageToGive){
 		currentHealth -= damageToGive;
 	}
 

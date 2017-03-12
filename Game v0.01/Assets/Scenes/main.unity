@@ -4030,6 +4030,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef32501d1cbaaa5468e01b0a92d4bf37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToGive: 5
+  damageBurst: {fileID: 1232110550652158, guid: 0a39b8aa1a0c3154994506587d1a1034,
+    type: 2}
+  damageNumber: {fileID: 1873994474016044, guid: 5b87f23b61d307a4caaa1ab1d27fd0e8,
+    type: 2}
 --- !u!1001 &1103902557
 Prefab:
   m_ObjectHideFlags: 0
@@ -4039,11 +4044,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4023152550377512, guid: 39ada618c0a92c74d8a43f7dacbf4964, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 21.68
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 4023152550377512, guid: 39ada618c0a92c74d8a43f7dacbf4964, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.35
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: 4023152550377512, guid: 39ada618c0a92c74d8a43f7dacbf4964, type: 2}
       propertyPath: m_LocalPosition.z
