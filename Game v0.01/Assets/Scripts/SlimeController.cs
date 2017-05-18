@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SlimeController : MonoBehaviour {
 
+	//Similar to PlayerController, this handles movement for enemy slimes
+	//Is attached to enemy characters
+	//**Extremely basic random movement, could / should be changed to follow player
+
+
 	private Rigidbody2D enemyRigidBody;
 
 	private bool moving;
@@ -59,7 +64,7 @@ public class SlimeController : MonoBehaviour {
 				//timeToMoveCounter = timeToMove;
 				timeToMoveCounter = Random.Range (timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
 
-				moveDirection = new Vector3 (Random.Range(-1f,1f) * moveSpeed,Random.Range(-1f,1f) * moveSpeed,0f);
+				moveDirection = new Vector3 (Random.Range(-.5f,.5f) * moveSpeed,Random.Range(-.5f,.5f) * moveSpeed,0f);
 			}
 		}
 
@@ -79,6 +84,12 @@ public class SlimeController : MonoBehaviour {
 			thePlayer = other.gameObject;
 		}
 		*/
+	}
+
+	public void StunEnemy(){
+		moving = false;
+		enemyRigidBody.velocity = Vector2.zero;
+		timeBetweenMoveCounter = Random.Range (timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
 	}
 
 }

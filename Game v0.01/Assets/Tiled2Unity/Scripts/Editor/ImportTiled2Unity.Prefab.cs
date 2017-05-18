@@ -25,7 +25,7 @@ namespace Tiled2Unity
             if (importComponent != null)
             {
                 // The prefab has finished loading. Keep track of that status.
-                if (!importComponent.ImportComplete_Prefabs.Contains(asset))
+                if (!importComponent.ImportComplete_Prefabs.Contains(asset, StringComparer.OrdinalIgnoreCase))
                 {
                     importComponent.ImportComplete_Prefabs.Add(asset);
                 }
@@ -77,7 +77,7 @@ namespace Tiled2Unity
             string prefabFile = System.IO.Path.GetFileName(prefabPath);
 
             // Keep track of the prefab file being imported
-            if (!importComponent.ImportWait_Prefabs.Contains(prefabFile))
+            if (!importComponent.ImportWait_Prefabs.Contains(prefabFile, StringComparer.OrdinalIgnoreCase))
             {
                 importComponent.ImportWait_Prefabs.Add(prefabFile);
                 importComponent.ImportingAssets.Add(prefabPath);
@@ -156,6 +156,7 @@ namespace Tiled2Unity
                 // Add any layer components
                 AddTileLayerComponentsTo(child, goXml);
                 AddObjectLayerComponentsTo(child, goXml);
+                AddGroupLayerComponentsTo(child, goXml);
 
                 // Add any object group items
                 AddTmxObjectComponentsTo(child, goXml);
@@ -182,9 +183,6 @@ namespace Tiled2Unity
                 // Does this game object have a layer?
                 AssignLayerTo(child, goXml, importComponent);
 
-                // Are there any custom properties?
-                HandleCustomProperties(child, goXml, customImporters);
-
                 // Set scale and rotation *after* children are added otherwise Unity will have child+parent transform cancel each other out
                 float sx = ImportUtils.GetAttributeAsFloat(goXml, "scaleX", 1.0f);
                 float sy = ImportUtils.GetAttributeAsFloat(goXml, "scaleY", 1.0f);
@@ -195,6 +193,9 @@ namespace Tiled2Unity
                 Vector3 localRotation = new Vector3();
                 localRotation.z = -ImportUtils.GetAttributeAsFloat(goXml, "rotation", 0);
                 child.transform.eulerAngles = localRotation;
+
+                // Are there any custom properties? (This comes last - after all transformations have taken place.)
+                HandleCustomProperties(child, goXml, customImporters);
             }
         }
 
@@ -431,6 +432,16 @@ namespace Tiled2Unity
                 Tiled2Unity.ObjectLayer objectLayer = gameObject.AddComponent<Tiled2Unity.ObjectLayer>();
                 objectLayer.Color = ImportUtils.GetAttributeAsColor(xml, "color", Color.black);
                 SetLayerComponentProperties(objectLayer, xml);
+            }
+        }
+
+        private void AddGroupLayerComponentsTo(GameObject gameObject, XElement goXml)
+        {
+            var xml = goXml.Element("GroupLayer");
+            if (xml != null)
+            {
+                Tiled2Unity.GroupLayer groupLayer = gameObject.AddComponent<Tiled2Unity.GroupLayer>();
+                SetLayerComponentProperties(groupLayer, xml);
             }
         }
 

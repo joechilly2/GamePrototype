@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HurtPlayer : MonoBehaviour {
 
+	//Script that is used to damage players.
+	//Is put onto enemies, not players
+
 	public int damageToGive;
 
 	// Use this for initialization

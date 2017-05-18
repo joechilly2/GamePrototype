@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerHealthManager : MonoBehaviour {
 
+	//Handles player health, is put onto player object
+	//Only 1 of these should exist at any time.
+
 	public int playerMaxHealth;
 	public int playerCurrentHealth;
 

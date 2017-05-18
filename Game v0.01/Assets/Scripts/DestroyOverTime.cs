@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DestroyOverTime : MonoBehaviour {
 
+	//Simple script that turns objects into time bombs
+	//Used currently for: particles, damage numbers
+
 	public float timeToDestroy;
 
 

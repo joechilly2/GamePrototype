@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class LoadNewArea : MonoBehaviour {
 
+	//Put onto trigger areas that will transport the player to another level
+	//relatively simnple, it uses a string system to find playerstartpoints in the other level
+
+	//POSSIBLE UPDATE: Replace the strings with some sort of tagging system or look for the areas
+	//by name instead of a predefined string.
+
 	public string levelToLoad;
 
 	private PlayerController thePlayer;
@@ -15,7 +21,6 @@ public class LoadNewArea : MonoBehaviour {
 	void Start () {
 		thePlayer = FindObjectOfType<PlayerController> ();
 
-		
 	}
 	
 	// Update is called once per frame
@@ -25,8 +30,8 @@ public class LoadNewArea : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.name == "Player") {
-			SceneManager.LoadScene(levelToLoad);
 			thePlayer.startPoint = exitPoint;
+			SceneManager.LoadScene(levelToLoad);
 		}
 	}
 

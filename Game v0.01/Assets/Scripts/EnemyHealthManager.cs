@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyHealthManager : MonoBehaviour {
 
+	//Script that is put onto enemies to manage their max and
+	//current health. Contains api to be used in other classes
+
 	public int maxHealth;
 	public int currentHealth;
 
@@ -19,8 +22,7 @@ public class EnemyHealthManager : MonoBehaviour {
 		}
 
 	}
-
-
+		
 	public void HurtEnemy(int damageToGive){
 		currentHealth -= damageToGive;
 	}
