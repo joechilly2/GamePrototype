@@ -642,7 +642,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 563767266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.22, y: -9.84, z: 0}
+  m_LocalPosition: {x: 18.64, y: -8.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -792,7 +792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3af46f774ca444ba39d04ef0f870fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointName: Spawn In
+  pointName: SpawnIn
 --- !u!4 &847364578
 Transform:
   m_ObjectHideFlags: 0
@@ -800,7 +800,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 847364576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.62, y: -10.63, z: 0}
+  m_LocalPosition: {x: 17.48, y: -10.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1716,7 +1716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Hall1
-  exitPoint: Spawn Out
+  exitPoint: SpawnOut
 --- !u!61 &1793119468
 BoxCollider2D:
   m_ObjectHideFlags: 0

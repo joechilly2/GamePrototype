@@ -17,6 +17,9 @@ public class LoadNewArea : MonoBehaviour {
 
 	public string exitPoint;
 
+	private float countdown = 2;
+	private bool isSwapping = false;
+
 	// Use this for initialization
 	void Start () {
 		thePlayer = FindObjectOfType<PlayerController> ();
@@ -25,14 +28,25 @@ public class LoadNewArea : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (isSwapping) {
+			countdown -= Time.deltaTime;
+			if(countdown <= 0){
+				SceneManager.LoadScene(levelToLoad);
+			}
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.name == "Player") {
 			thePlayer.startPoint = exitPoint;
-			SceneManager.LoadScene(levelToLoad);
+			other.GetComponent<PlayerController> ().startPoint = exitPoint;
+			Debug.Log ("Moving to point:" + thePlayer.startPoint);
+			InitiateLevelSwap ();
 		}
+	}
+
+	void InitiateLevelSwap(){
+		isSwapping = true;
 	}
 
 }
