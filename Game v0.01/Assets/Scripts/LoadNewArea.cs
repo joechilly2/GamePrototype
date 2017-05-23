@@ -17,7 +17,7 @@ public class LoadNewArea : MonoBehaviour {
 
 	public string exitPoint;
 
-	private float countdown = 2;
+	private float countdown = 0.1f;
 	private bool isSwapping = false;
 
 	// Use this for initialization
