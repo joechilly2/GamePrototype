@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Tiled2Unity generated xml data-->
+<!--Do not modify by hand-->
+<!--Last exported: 5/23/2017 3:33:20 PM-->
+<Tiled2Unity version="1.0.11.2">
+  <AssignMaterial mesh="mesh_0001" material="darkbricks" />
+  <AssignMaterial mesh="mesh_0002" material="bricks1" />
+  <AssignMaterial mesh="mesh_0003" material="tile1" />
+  <Prefab name="ratto_room" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="2" numTilesWide="30" numTilesHigh="20" tileWidth="16" tileHeight="16" exportScale="1" mapWidthInPixels="480" mapHeightInPixels="320" backgroundColor="#808080">
+    <GameObject name="Tile Layer 1" x="0" y="0" z="0">
+      <TileLayer opacity="1" offsetX="0" offsetY="0" />
+      <GameObject name="darkbricks" copy="mesh_0001" sortingLayerName="" sortingOrder="0" opacity="1" />
+      <GameObject name="bricks1" copy="mesh_0002" sortingLayerName="" sortingOrder="0" opacity="1" />
+      <GameObject name="tile1" copy="mesh_0003" sortingLayerName="" sortingOrder="0" opacity="1" />
+    </GameObject>
+    <GameObject name="Tile Layer 2" x="0" y="0" z="0">
+      <TileLayer opacity="1" offsetX="0" offsetY="0" />
+    </GameObject>
+    <GameObject name="Object Layer 1" x="0" y="0" z="0">
+      <ObjectLayer offsetX="0" offsetY="0" color="#ff808080" />
+      <GameObject name="RectangleObject" x="240" y="-122.25" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="1" tmx-object-name="" tmx-object-type="" tmx-object-x="240" tmx-object-y="122.25" tmx-object-width="79.75" tmx-object-height="5.5" tmx-object-rotation="0" />
+        <BoxCollider2D width="79.75" height="5.5" />
+      </GameObject>
+      <GameObject name="RectangleObject" x="320.25" y="-127.5" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="2" tmx-object-name="" tmx-object-type="" tmx-object-x="320.25" tmx-object-y="127.5" tmx-object-width="5.25" tmx-object-height="80.25" tmx-object-rotation="0" />
+        <BoxCollider2D width="5.25" height="80.25" />
+      </GameObject>
+      <GameObject name="RectangleObject" x="233.25" y="-127.75" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="5" tmx-object-name="" tmx-object-type="" tmx-object-x="233.25" tmx-object-y="127.75" tmx-object-width="6.75" tmx-object-height="79.75" tmx-object-rotation="0" />
+        <BoxCollider2D width="6.75" height="79.75" />
+      </GameObject>
+      <GameObject name="RectangleObject" x="288.25" y="-207.75" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="3" tmx-object-name="" tmx-object-type="" tmx-object-x="288.25" tmx-object-y="207.75" tmx-object-width="32.25" tmx-object-height="2.75" tmx-object-rotation="0" />
+        <BoxCollider2D width="32.25" height="2.75" />
+      </GameObject>
+      <GameObject name="RectangleObject" x="288.25" y="-207.75" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="8" tmx-object-name="" tmx-object-type="" tmx-object-x="288.25" tmx-object-y="207.75" tmx-object-width="3.75" tmx-object-height="16" tmx-object-rotation="0" />
+        <BoxCollider2D width="3.75" height="16" />
+      </GameObject>
+      <GameObject name="RectangleObject" x="239.75" y="-208.25" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="4" tmx-object-name="" tmx-object-type="" tmx-object-x="239.75" tmx-object-y="208.25" tmx-object-width="32" tmx-object-height="2" tmx-object-rotation="0" />
+        <BoxCollider2D width="32" height="2" />
+      </GameObject>
+      <GameObject name="RectangleObject" x="269.25" y="-208.25" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="6" tmx-object-name="" tmx-object-type="" tmx-object-x="269.25" tmx-object-y="208.25" tmx-object-width="2.75" tmx-object-height="15.25" tmx-object-rotation="0" />
+        <BoxCollider2D width="2.75" height="15.25" />
+      </GameObject>
+      <GameObject name="RectangleObject" x="272.25" y="-224" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="7" tmx-object-name="" tmx-object-type="" tmx-object-x="272.25" tmx-object-y="224" tmx-object-width="15.25" tmx-object-height="3" tmx-object-rotation="0" />
+        <BoxCollider2D width="15.25" height="3" />
+      </GameObject>
+    </GameObject>
+  </Prefab>
+  <ImportMesh filename="ratto_room.obj">IyBXYXZlZnJvbnQgT0JKIGZpbGUgYXV0b21hdGljYWxseSBnZW5lcmF0ZWQgYnkgVGlsZWQyVW5pdHkNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSA4MikNCnYgLTMyMCAtODAgMA0KdiAtMzM2IC04MCAwDQp2IC0zMzYgLTY0IDANCnYgLTMyMCAtNjQgMA0KdiAtMzA0IC04MCAwDQp2IC0zMDQgLTY0IDANCnYgLTI4OCAtODAgMA0KdiAtMjg4IC02NCAwDQp2IC0yNzIgLTgwIDANCnYgLTI3MiAtNjQgMA0KdiAtMjU2IC04MCAwDQp2IC0yNTYgLTY0IDANCnYgLTI0MCAtODAgMA0KdiAtMjQwIC02NCAwDQp2IC0yMjQgLTgwIDANCnYgLTIyNCAtNjQgMA0KdiAtMzIwIC05NiAwDQp2IC0zMzYgLTk2IDANCnYgLTIyNCAtOTYgMA0KdiAtMjQwIC05NiAwDQp2IC0zMjAgLTExMiAwDQp2IC0zMzYgLTExMiAwDQp2IC0yMjQgLTExMiAwDQp2IC0yNDAgLTExMiAwDQp2IC0zMjAgLTEyOCAwDQp2IC0zMzYgLTEyOCAwDQp2IC0yMjQgLTEyOCAwDQp2IC0yNDAgLTEyOCAwDQp2IC0zMjAgLTE0NCAwDQp2IC0zMzYgLTE0NCAwDQp2IC0yMjQgLTE0NCAwDQp2IC0yNDAgLTE0NCAwDQp2IC0zMjAgLTE2MCAwDQp2IC0zMzYgLTE2MCAwDQp2IC0yMjQgLTE2MCAwDQp2IC0yNDAgLTE2MCAwDQp2IC0zMjAgLTE3NiAwDQp2IC0zMzYgLTE3NiAwDQp2IC0yMjQgLTE3NiAwDQp2IC0yNDAgLTE3NiAwDQp2IC0zMjAgLTE5MiAwDQp2IC0zMzYgLTE5MiAwDQp2IC0yMjQgLTE5MiAwDQp2IC0yNDAgLTE5MiAwDQp2IC0zMjAgLTIwOCAwDQp2IC0zMzYgLTIwOCAwDQp2IC0yMjQgLTIwOCAwDQp2IC0yNDAgLTIwOCAwDQp2IC0zMDQgLTk2IDANCnYgLTI4OCAtOTYgMA0KdiAtMjcyIC05NiAwDQp2IC0yNTYgLTk2IDANCnYgLTMwNCAtMTEyIDANCnYgLTI4OCAtMTEyIDANCnYgLTI3MiAtMTEyIDANCnYgLTI1NiAtMTEyIDANCnYgLTMwNCAtMTI4IDANCnYgLTI4OCAtMTI4IDANCnYgLTI3MiAtMTI4IDANCnYgLTI1NiAtMTI4IDANCnYgLTMwNCAtMTQ0IDANCnYgLTI4OCAtMTQ0IDANCnYgLTI3MiAtMTQ0IDANCnYgLTI1NiAtMTQ0IDANCnYgLTMwNCAtMTYwIDANCnYgLTI4OCAtMTYwIDANCnYgLTI3MiAtMTYwIDANCnYgLTI1NiAtMTYwIDANCnYgLTMwNCAtMTc2IDANCnYgLTI4OCAtMTc2IDANCnYgLTI3MiAtMTc2IDANCnYgLTI1NiAtMTc2IDANCnYgLTMwNCAtMTkyIDANCnYgLTI4OCAtMTkyIDANCnYgLTI3MiAtMTkyIDANCnYgLTI1NiAtMTkyIDANCnYgLTMwNCAtMjA4IDANCnYgLTI4OCAtMjA4IDANCnYgLTI3MiAtMjA4IDANCnYgLTI1NiAtMjA4IDANCnYgLTI3MiAtMjI0IDANCnYgLTI4OCAtMjI0IDANCg0KIyBUZXh0dXJlIGNvb3JpZGluYXRlcyAoQ291bnQgPSA0KQ0KdnQgMC4wMDAxMjIwNzAzIDAuMDAwMTIyMDcwMw0KdnQgMC45OTk4Nzc5IDAuMDAwMTIyMDcwMw0KdnQgMC45OTk4Nzc5IDAuOTk5ODc3OQ0KdnQgMC4wMDAxMjIwNzAzIDAuOTk5ODc3OQ0KDQojIE5vcm1hbA0Kdm4gMCAwIC0xDQoNCiMgR3JvdXBzIChDb3VudCA9IDIpDQoKZyBtZXNoXzAwMDEKZiAxLzEvMSAyLzIvMSAzLzMvMSA0LzQvMQpmIDUvMS8xIDEvMi8xIDQvMy8xIDYvNC8xCmYgNy8xLzEgNS8yLzEgNi8zLzEgOC80LzEKZiA5LzEvMSA3LzIvMSA4LzMvMSAxMC80LzEKZiAxMS8xLzEgOS8yLzEgMTAvMy8xIDEyLzQvMQpmIDEzLzEvMSAxMS8yLzEgMTIvMy8xIDE0LzQvMQpmIDE1LzEvMSAxMy8yLzEgMTQvMy8xIDE2LzQvMQpmIDE3LzEvMSAxOC8yLzEgMi8zLzEgMS80LzEKZiAxOS8xLzEgMjAvMi8xIDEzLzMvMSAxNS80LzEKZiAyMS8xLzEgMjIvMi8xIDE4LzMvMSAxNy80LzEKZiAyMy8xLzEgMjQvMi8xIDIwLzMvMSAxOS80LzEKZiAyNS8xLzEgMjYvMi8xIDIyLzMvMSAyMS80LzEKZiAyNy8xLzEgMjgvMi8xIDI0LzMvMSAyMy80LzEKZiAyOS8xLzEgMzAvMi8xIDI2LzMvMSAyNS80LzEKZiAzMS8xLzEgMzIvMi8xIDI4LzMvMSAyNy80LzEKZiAzMy8xLzEgMzQvMi8xIDMwLzMvMSAyOS80LzEKZiAzNS8xLzEgMzYvMi8xIDMyLzMvMSAzMS80LzEKZiAzNy8xLzEgMzgvMi8xIDM0LzMvMSAzMy80LzEKZiAzOS8xLzEgNDAvMi8xIDM2LzMvMSAzNS80LzEKZiA0MS8xLzEgNDIvMi8xIDM4LzMvMSAzNy80LzEKZiA0My8xLzEgNDQvMi8xIDQwLzMvMSAzOS80LzEKZiA0NS8xLzEgNDYvMi8xIDQyLzMvMSA0MS80LzEKZiA0Ny8xLzEgNDgvMi8xIDQ0LzMvMSA0My80LzEKCmcgbWVzaF8wMDAyCmYgNDkvMS8xIDE3LzIvMSAxLzMvMSA1LzQvMQpmIDUwLzEvMSA0OS8yLzEgNS8zLzEgNy80LzEKZiA1MS8xLzEgNTAvMi8xIDcvMy8xIDkvNC8xCmYgNTIvMS8xIDUxLzIvMSA5LzMvMSAxMS80LzEKZiAyMC8xLzEgNTIvMi8xIDExLzMvMSAxMy80LzEKZiA1My8xLzEgMjEvMi8xIDE3LzMvMSA0OS80LzEKZiA1NC8xLzEgNTMvMi8xIDQ5LzMvMSA1MC80LzEKZiA1NS8xLzEgNTQvMi8xIDUwLzMvMSA1MS80LzEKZiA1Ni8xLzEgNTUvMi8xIDUxLzMvMSA1Mi80LzEKZiAyNC8xLzEgNTYvMi8xIDUyLzMvMSAyMC80LzEKZiA1Ny8xLzEgMjUvMi8xIDIxLzMvMSA1My80LzEKZiA1OC8xLzEgNTcvMi8xIDUzLzMvMSA1NC80LzEKZiA1OS8xLzEgNTgvMi8xIDU0LzMvMSA1NS80LzEKZiA2MC8xLzEgNTkvMi8xIDU1LzMvMSA1Ni80LzEKZiAyOC8xLzEgNjAvMi8xIDU2LzMvMSAyNC80LzEKCmcgbWVzaF8wMDAzCmYgNjEvMS8xIDI5LzIvMSAyNS8zLzEgNTcvNC8xCmYgNjIvMS8xIDYxLzIvMSA1Ny8zLzEgNTgvNC8xCmYgNjMvMS8xIDYyLzIvMSA1OC8zLzEgNTkvNC8xCmYgNjQvMS8xIDYzLzIvMSA1OS8zLzEgNjAvNC8xCmYgMzIvMS8xIDY0LzIvMSA2MC8zLzEgMjgvNC8xCmYgNjUvMS8xIDMzLzIvMSAyOS8zLzEgNjEvNC8xCmYgNjYvMS8xIDY1LzIvMSA2MS8zLzEgNjIvNC8xCmYgNjcvMS8xIDY2LzIvMSA2Mi8zLzEgNjMvNC8xCmYgNjgvMS8xIDY3LzIvMSA2My8zLzEgNjQvNC8xCmYgMzYvMS8xIDY4LzIvMSA2NC8zLzEgMzIvNC8xCmYgNjkvMS8xIDM3LzIvMSAzMy8zLzEgNjUvNC8xCmYgNzAvMS8xIDY5LzIvMSA2NS8zLzEgNjYvNC8xCmYgNzEvMS8xIDcwLzIvMSA2Ni8zLzEgNjcvNC8xCmYgNzIvMS8xIDcxLzIvMSA2Ny8zLzEgNjgvNC8xCmYgNDAvMS8xIDcyLzIvMSA2OC8zLzEgMzYvNC8xCmYgNzMvMS8xIDQxLzIvMSAzNy8zLzEgNjkvNC8xCmYgNzQvMS8xIDczLzIvMSA2OS8zLzEgNzAvNC8xCmYgNzUvMS8xIDc0LzIvMSA3MC8zLzEgNzEvNC8xCmYgNzYvMS8xIDc1LzIvMSA3MS8zLzEgNzIvNC8xCmYgNDQvMS8xIDc2LzIvMSA3Mi8zLzEgNDAvNC8xCmYgNzcvMS8xIDQ1LzIvMSA0MS8zLzEgNzMvNC8xCmYgNzgvMS8xIDc3LzIvMSA3My8zLzEgNzQvNC8xCmYgNzkvMS8xIDc4LzIvMSA3NC8zLzEgNzUvNC8xCmYgODAvMS8xIDc5LzIvMSA3NS8zLzEgNzYvNC8xCmYgNDgvMS8xIDgwLzIvMSA3Ni8zLzEgNDQvNC8xCmYgODEvMS8xIDgyLzIvMSA3OC8zLzEgNzkvNC8xCg0K</ImportMesh>
+  <ImportTexture filename="darkbricks.png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtklEQVQ4jaWSMQ6EIBREn4TYkFhxCg/h/a9Bb2VCQ6PVKPtXYJOdhGqGD+9npm3bzhACACkllmVBmucZgNqPMVJKuT0PkHPGSoGWL7mWUUq5T8sHmNZ1PZvjf5C3TOKFZyc1Tp1JKT0I+lLO+YvZYtS+awUV0ut2H/L9vu9dxpHvY4zYHvSY1RNlnL5Tc/WYbWbYg9GQ/3tgmaQQwiuz7Yl7u9yT3ZeHz6VpWKtM1vfHcXRfHPkXQ1OImmBOQlQAAAAASUVORK5CYII=</ImportTexture>
+  <ImportTexture filename="bricks1.png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABEUlEQVQ4jY2TsY6DMBBEJ6cNKdy62orU/B7fSSpXbqj4AeIixtJdwe1m7ZAoKyGBZrzrNzancRx/nXMAgBACmBlSXdcBAKze9z1yzqoRAKSUAACP/HhZ/E6X+rEfZSv6nnPW550OALQsS7WlGCPoTACAS3d52VEIodKJmbUBMyuvNPPe62LJRzwxxieCbCmlpMzrfa20NpP1vtYZWGNKCWUrOr3NQ3QKIexhnEmZ7QlYZuG2Og3DoEzTbcK1v35k9t7rEGbeEYRbjukTc4tbZdDmccTcemie54r76B5Y5hjjzv6fGQmnMEk55w6Z7T2ZbtOOYCfYsswWRTIpW9l/JssqzVpm8VgdAOhbZuEWn3j+AOlsxBublvdjAAAAAElFTkSuQmCC</ImportTexture>
+  <ImportTexture filename="tile1.png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAArUlEQVQ4jZWRSw7DIAxEp2AhsfKJOTQrJBTULFIq8KdJvYs9bzwxr1LKGwByzpiVUoKs3rvqtdZAK7yCzKyAWutmlnMGSdgCpelqFJ7ClhGAy+AfWOrJOhgAENH2fRyH0qSUrgRyu4Rnz+oHS/ir1jkzg7xhjHEDxxibbv6SSmDBXg8AwveaN9FlTb1K4G3yZuHpdu+5VYL1WHfw52n19jHGFrf3bhoDgJvdA2Sdt8kvMLE/aSMAAAAASUVORK5CYII=</ImportTexture>
+</Tiled2Unity>

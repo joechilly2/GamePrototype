@@ -16,12 +16,23 @@ public class HurtPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
-	void OnCollisionEnter2D(Collision2D other){
+	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.name == "Player") {
-			other.gameObject.GetComponent<PlayerHealthManager> ().HurtPlayer (damageToGive);
+			if (other.gameObject.GetComponent<PlayerController> ().invulnurable == false) {
+				other.gameObject.GetComponent<PlayerHealthManager> ().HurtPlayer (damageToGive);
+				other.gameObject.GetComponent<PlayerController> ().invulnurable = true;
+			}
+		}
+	}
+
+	void OnTriggerStay2D(Collider2D other){
+		if (other.gameObject.name == "Player") {
+			if (other.gameObject.GetComponent<PlayerController> ().invulnurable == false) {
+				other.gameObject.GetComponent<PlayerHealthManager> ().HurtPlayer (damageToGive);
+				other.gameObject.GetComponent<PlayerController> ().invulnurable = true;
+			}
 		}
 	}
 }

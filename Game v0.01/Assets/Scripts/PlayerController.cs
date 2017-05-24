@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour{
 
 	public string startPoint;
 
+	public bool invulnurable = false;
+	private float invulntime = 3f;
+	private float invulntimer = 3f;
+
 	//public PlayerInteractionAreas interactions;
 	// Use this for initialization
 	void Start ()
@@ -51,8 +55,15 @@ public class PlayerController : MonoBehaviour{
 	// Update is called once per frame
 	void Update ()
 	{
-		playerMoving = false;
+		if (invulnurable) {
+			invulntimer -= Time.deltaTime;
+			if (invulntimer <= 0) {
+				invulnurable = false;
+				invulntimer = invulntime;
+			}
+		}
 
+		playerMoving = false;
 		if (!attacking) {
 
 			/*if (Input.GetAxisRaw ("Horizontal") > 0.5f || Input.GetAxisRaw ("Horizontal") < -0.5f) {

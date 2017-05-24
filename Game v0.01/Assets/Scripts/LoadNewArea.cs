@@ -13,6 +13,8 @@ public class LoadNewArea : MonoBehaviour {
 
 	public string levelToLoad;
 
+	public bool pressToLoad;
+
 	private PlayerController thePlayer;
 
 	public string exitPoint;
@@ -36,12 +38,22 @@ public class LoadNewArea : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other){
-		if (other.gameObject.name == "Player") {
-			thePlayer.startPoint = exitPoint;
-			other.GetComponent<PlayerController> ().startPoint = exitPoint;
-			Debug.Log ("Moving to point:" + thePlayer.startPoint);
-			InitiateLevelSwap ();
+	void OnTriggerStay2D(Collider2D other){
+		if (!pressToLoad) {
+			if (other.gameObject.name == "Player") {
+				thePlayer.startPoint = exitPoint;
+				other.GetComponent<PlayerController> ().startPoint = exitPoint;
+				Debug.Log ("Moving to point:" + thePlayer.startPoint);
+				InitiateLevelSwap ();
+			}
+		}
+		if (pressToLoad) {
+			if (other.gameObject.name == "Player" && Input.GetKeyDown (KeyCode.Space)) {
+				thePlayer.startPoint = exitPoint;
+				other.GetComponent<PlayerController> ().startPoint = exitPoint;
+				Debug.Log ("Moving to point:" + thePlayer.startPoint);
+				SceneManager.LoadScene(levelToLoad);
+			}
 		}
 	}
 

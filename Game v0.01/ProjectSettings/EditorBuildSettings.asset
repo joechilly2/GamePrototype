@@ -7,9 +7,37 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/SpawnRoom.unity
+    guid: 3b7ace0663820fa4bb0cb6e2b1008e2b
   - enabled: 1
     path: Assets/Scenes/Hall1.unity
+    guid: 740e23ec08c64f940bf1a2297c07659c
   - enabled: 1
     path: Assets/Scenes/main.unity
+    guid: 22958453d318cd044824a0fd50c3c8c7
   - enabled: 1
     path: Assets/Scenes/House1.unity
+    guid: 56556f5e41e72b64cb4290ef1eea783a
+  - enabled: 1
+    path: Assets/Scenes/ThirdRoom.unity
+    guid: 7eb5944efba62ee4e9c2d7a8932cf521
+  - enabled: 1
+    path: Assets/Scenes/RattoRoom.unity
+    guid: 022d0f3a3eceb5147ac9ba03747381aa
+  - enabled: 1
+    path: Assets/Scenes/LockedRoom.unity
+    guid: 66b4b1778f657964cabd254b94172db4
+  - enabled: 1
+    path: Assets/Scenes/Dungeon1.unity
+    guid: f5c185a7daa9905498140f4e76f30c35
+  - enabled: 1
+    path: Assets/Scenes/ExitRoom.unity
+    guid: f02321d41329d9a4f9ec3486911562d1
+  - enabled: 1
+    path: Assets/Scenes/Dungeon2.unity
+    guid: a33cbf617f72b92409ec2808189113a8
+  - enabled: 1
+    path: Assets/Scenes/ConnectorRoom.unity
+    guid: 45810092e26879f4cb7b858e8e68a2c3
+  - enabled: 1
+    path: Assets/Scenes/ThroneRoom.unity
+    guid: 070e1e65ca96f1e4a8fab9861b0e47b3

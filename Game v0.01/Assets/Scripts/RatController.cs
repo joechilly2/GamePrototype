@@ -102,7 +102,7 @@ public class RatController : MonoBehaviour {
 			}
 		} else {
 			anim.SetBool ("IsMoving", true);
-			transform.position = Vector2.MoveTowards(transform.position, thePlayer.transform.position, (moveSpeed * Time.deltaTime)*0.4f);
+			transform.position = Vector2.MoveTowards(new Vector3(transform.position.x + Random.Range (-.01f, .01f), transform.position.y, transform.position.z), thePlayer.transform.position, (moveSpeed * Time.deltaTime)*0.4f);
 			anim.SetFloat ("MoveX", 0f);
 			anim.SetFloat ("MoveY", 0f);
 			anim.SetFloat ("LastMoveX", 0f);
