@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OpenChest : MonoBehaviour {
 
+	public string key;
+
 	private bool open;
 	private Animator anim;
 
@@ -17,6 +19,9 @@ public class OpenChest : MonoBehaviour {
 	void Update () {
 		if (open) {
 			anim.SetBool ("ChestOpen", open);
+			if (key != "") {
+				GameObject.FindGameObjectWithTag ("GlobalValueHolder").GetComponent<GlobalValueHolder> ().UnlockRoom (key);
+			}
 		}
 	}
 

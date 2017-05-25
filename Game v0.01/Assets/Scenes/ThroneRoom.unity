@@ -136,6 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acdc54d7c711234eb853dedcb5064ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemiesArePresent: 0
+  locked: 0
   levelToLoad: Dungeon2
   pressToLoad: 0
   exitPoint: FromThroneRoom
@@ -186,6 +188,8 @@ GameObject:
   m_Component:
   - component: {fileID: 100796839}
   - component: {fileID: 100796838}
+  - component: {fileID: 100796840}
+  - component: {fileID: 100796841}
   m_Layer: 0
   m_Name: statue1RS (11)
   m_TagString: Untagged
@@ -222,8 +226,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1452819563
-  m_SortingLayer: 3
+  m_SortingLayerID: 1258856817
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 90aa0ca2a9de98c4eb0befdf06795886, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -246,6 +250,44 @@ Transform:
   m_Father: {fileID: 166996017}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &100796840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100796837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: WorldObjects
+  orderToChange: 0
+--- !u!61 &100796841
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100796837}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03954792, y: 0.44161367}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6854897, y: 2.2222338}
+  m_EdgeRadius: 0
 --- !u!1 &146271904
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +462,8 @@ GameObject:
   m_Component:
   - component: {fileID: 475576769}
   - component: {fileID: 475576768}
+  - component: {fileID: 475576771}
+  - component: {fileID: 475576770}
   m_Layer: 0
   m_Name: throne2
   m_TagString: Untagged
@@ -480,6 +524,44 @@ Transform:
   m_Father: {fileID: 166996017}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &475576770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 475576767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: WorldObjects
+  orderToChange: 0
+--- !u!61 &475576771
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 475576767}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.007971287, y: 1.2594681}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 5}
+    newSize: {x: 3, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.291354, y: 2.6086044}
+  m_EdgeRadius: 0
 --- !u!1 &677468842
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +640,8 @@ GameObject:
   m_Component:
   - component: {fileID: 780969539}
   - component: {fileID: 780969538}
+  - component: {fileID: 780969540}
+  - component: {fileID: 780969541}
   m_Layer: 0
   m_Name: statue1RS (5)
   m_TagString: Untagged
@@ -594,8 +678,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1452819563
-  m_SortingLayer: 3
+  m_SortingLayerID: 1258856817
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 629093c1d89689e4ab836611529c7957, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -618,6 +702,44 @@ Transform:
   m_Father: {fileID: 166996017}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &780969540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780969537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: WorldObjects
+  orderToChange: 0
+--- !u!61 &780969541
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780969537}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03954792, y: 0.44161367}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6854897, y: 2.2222338}
+  m_EdgeRadius: 0
 --- !u!1 &794551311
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,6 +749,8 @@ GameObject:
   m_Component:
   - component: {fileID: 794551313}
   - component: {fileID: 794551312}
+  - component: {fileID: 794551314}
+  - component: {fileID: 794551315}
   m_Layer: 0
   m_Name: statue1RS (1)
   m_TagString: Untagged
@@ -663,8 +787,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1452819563
-  m_SortingLayer: 3
+  m_SortingLayerID: 1258856817
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 220dd963cae735344bc0103b4d720eab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -687,6 +811,44 @@ Transform:
   m_Father: {fileID: 166996017}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &794551314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 794551311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: WorldObjects
+  orderToChange: 0
+--- !u!61 &794551315
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 794551311}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03954792, y: 0.44161367}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6854897, y: 2.2222338}
+  m_EdgeRadius: 0
 --- !u!1 &980424655
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acdc54d7c711234eb853dedcb5064ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemiesArePresent: 0
+  locked: 0
   levelToLoad: ExitRoom
   pressToLoad: 0
   exitPoint: FromThroneRoom
@@ -806,6 +970,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1137451887}
   - component: {fileID: 1137451886}
+  - component: {fileID: 1137451889}
+  - component: {fileID: 1137451888}
+  - component: {fileID: 1137451890}
   m_Layer: 0
   m_Name: statue1RS
   m_TagString: Untagged
@@ -842,8 +1009,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1452819563
-  m_SortingLayer: 3
+  m_SortingLayerID: 1258856817
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 220dd963cae735344bc0103b4d720eab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -866,6 +1033,57 @@ Transform:
   m_Father: {fileID: 166996017}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1137451888
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137451885}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03954792, y: 0.44161367}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6854897, y: 2.2222338}
+  m_EdgeRadius: 0
+--- !u!114 &1137451889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137451885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: WorldObjects
+  orderToChange: 0
+--- !u!114 &1137451890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137451885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: 
+  orderToChange: 0
 --- !u!1 &1234074109
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,6 +1162,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1255866977}
   - component: {fileID: 1255866976}
+  - component: {fileID: 1255866978}
+  - component: {fileID: 1255866979}
   m_Layer: 0
   m_Name: statue1RS (7)
   m_TagString: Untagged
@@ -980,8 +1200,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1452819563
-  m_SortingLayer: 3
+  m_SortingLayerID: 1258856817
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 629093c1d89689e4ab836611529c7957, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1004,6 +1224,44 @@ Transform:
   m_Father: {fileID: 166996017}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1255866978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1255866975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: WorldObjects
+  orderToChange: 0
+--- !u!61 &1255866979
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1255866975}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03954792, y: 0.44161367}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6854897, y: 2.2222338}
+  m_EdgeRadius: 0
 --- !u!1 &1262478778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,6 +1271,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1262478780}
   - component: {fileID: 1262478779}
+  - component: {fileID: 1262478781}
+  - component: {fileID: 1262478782}
   m_Layer: 0
   m_Name: statue1RS (10)
   m_TagString: Untagged
@@ -1049,8 +1309,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1452819563
-  m_SortingLayer: 3
+  m_SortingLayerID: 1258856817
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 90aa0ca2a9de98c4eb0befdf06795886, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1073,6 +1333,44 @@ Transform:
   m_Father: {fileID: 166996017}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1262478781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262478778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: WorldObjects
+  orderToChange: 0
+--- !u!61 &1262478782
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262478778}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03954792, y: 0.44161367}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6854897, y: 2.2222338}
+  m_EdgeRadius: 0
 --- !u!1 &1543665499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,6 +1380,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1543665501}
   - component: {fileID: 1543665500}
+  - component: {fileID: 1543665502}
+  - component: {fileID: 1543665503}
   m_Layer: 0
   m_Name: statue1RS (8)
   m_TagString: Untagged
@@ -1118,8 +1418,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1452819563
-  m_SortingLayer: 3
+  m_SortingLayerID: 1258856817
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 629093c1d89689e4ab836611529c7957, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1142,6 +1442,44 @@ Transform:
   m_Father: {fileID: 166996017}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1543665502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1543665499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: WorldObjects
+  orderToChange: 0
+--- !u!61 &1543665503
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1543665499}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03954792, y: 0.44161367}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6854897, y: 2.2222338}
+  m_EdgeRadius: 0
 --- !u!1 &1643885668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,6 +1489,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1643885670}
   - component: {fileID: 1643885669}
+  - component: {fileID: 1643885671}
+  - component: {fileID: 1643885672}
   m_Layer: 0
   m_Name: statue1RS (4)
   m_TagString: Untagged
@@ -1187,8 +1527,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1452819563
-  m_SortingLayer: 3
+  m_SortingLayerID: 1258856817
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 220dd963cae735344bc0103b4d720eab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1211,6 +1551,44 @@ Transform:
   m_Father: {fileID: 166996017}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1643885671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643885668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: WorldObjects
+  orderToChange: 0
+--- !u!61 &1643885672
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643885668}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03954792, y: 0.44161367}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6854897, y: 2.2222338}
+  m_EdgeRadius: 0
 --- !u!1 &1689188469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1598,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1689188471}
   - component: {fileID: 1689188470}
+  - component: {fileID: 1689188472}
+  - component: {fileID: 1689188473}
   m_Layer: 0
   m_Name: statue1RS (2)
   m_TagString: Untagged
@@ -1256,8 +1636,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1452819563
-  m_SortingLayer: 3
+  m_SortingLayerID: 1258856817
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 220dd963cae735344bc0103b4d720eab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1280,6 +1660,44 @@ Transform:
   m_Father: {fileID: 166996017}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1689188472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1689188469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: WorldObjects
+  orderToChange: 0
+--- !u!61 &1689188473
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1689188469}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03954792, y: 0.44161367}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6854897, y: 2.2222338}
+  m_EdgeRadius: 0
 --- !u!1 &1796791916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,6 +1776,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1908686003}
   - component: {fileID: 1908686002}
+  - component: {fileID: 1908686004}
+  - component: {fileID: 1908686005}
   m_Layer: 0
   m_Name: statue1RS (9)
   m_TagString: Untagged
@@ -1394,8 +1814,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1452819563
-  m_SortingLayer: 3
+  m_SortingLayerID: 1258856817
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 629093c1d89689e4ab836611529c7957, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1418,6 +1838,44 @@ Transform:
   m_Father: {fileID: 166996017}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1908686004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1908686001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: WorldObjects
+  orderToChange: 0
+--- !u!61 &1908686005
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1908686001}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03954792, y: 0.44161367}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6854897, y: 2.2222338}
+  m_EdgeRadius: 0
 --- !u!1 &1939905534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,6 +1885,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1939905536}
   - component: {fileID: 1939905535}
+  - component: {fileID: 1939905537}
+  - component: {fileID: 1939905538}
   m_Layer: 0
   m_Name: statue1RS (3)
   m_TagString: Untagged
@@ -1463,8 +1923,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1452819563
-  m_SortingLayer: 3
+  m_SortingLayerID: 1258856817
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 220dd963cae735344bc0103b4d720eab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1487,6 +1947,44 @@ Transform:
   m_Father: {fileID: 166996017}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1939905537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1939905534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: WorldObjects
+  orderToChange: 0
+--- !u!61 &1939905538
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1939905534}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03954792, y: 0.44161367}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6854897, y: 2.2222338}
+  m_EdgeRadius: 0
 --- !u!1 &2035717331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,6 +2063,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2122132621}
   - component: {fileID: 2122132620}
+  - component: {fileID: 2122132622}
+  - component: {fileID: 2122132623}
   m_Layer: 0
   m_Name: statue1RS (6)
   m_TagString: Untagged
@@ -1601,8 +2101,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1452819563
-  m_SortingLayer: 3
+  m_SortingLayerID: 1258856817
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 629093c1d89689e4ab836611529c7957, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1625,3 +2125,41 @@ Transform:
   m_Father: {fileID: 166996017}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2122132622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2122132619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238fcf43e21680442af0ee6e8327e843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChange: WorldObjects
+  orderToChange: 0
+--- !u!61 &2122132623
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2122132619}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03954792, y: 0.44161367}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6854897, y: 2.2222338}
+  m_EdgeRadius: 0

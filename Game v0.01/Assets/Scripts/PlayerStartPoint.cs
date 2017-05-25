@@ -16,14 +16,14 @@ public class PlayerStartPoint : MonoBehaviour {
 	void Start () {
 		//thePlayer = FindObjectOfType<PlayerController> ();
 		thePlayer = GameObject.Find("Player").GetComponent<PlayerController>();
-		Debug.Log ("Spawnpoint Name: " + pointName + " - Current Player Spawnpoint: " + thePlayer.startPoint);
+		//Debug.Log ("Spawnpoint Name: " + pointName + " - Current Player Spawnpoint: " + thePlayer.startPoint);
 		if (thePlayer.startPoint == pointName) {
-			Debug.Log ("Player Destination: " + thePlayer.startPoint);
-			Debug.Log ("Teleporting to point: " + pointName);
-			Debug.Log ("Can find player: " + !thePlayer.Equals(null));
+			//Debug.Log ("Player Destination: " + thePlayer.startPoint);
+			//Debug.Log ("Teleporting to point: " + pointName);
+			//Debug.Log ("Can find player: " + !thePlayer.Equals(null));
 			thePlayer.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x,this.gameObject.transform.position.y,this.gameObject.transform.position.z);
-			Debug.Log ("X Coord: " + this.gameObject.transform.position.x);
-			Debug.Log ("Y Coord: " + this.gameObject.transform.position.y);
+			//Debug.Log ("X Coord: " + this.gameObject.transform.position.x);
+			//Debug.Log ("Y Coord: " + this.gameObject.transform.position.y);
 			theCamera = FindObjectOfType<Camera> ();
 			theCamera.transform.position = new Vector3 (transform.position.x, transform.position.y, theCamera.transform.position.z);
 		}

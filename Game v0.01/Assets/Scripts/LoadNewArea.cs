@@ -11,6 +11,8 @@ public class LoadNewArea : MonoBehaviour {
 	//POSSIBLE UPDATE: Replace the strings with some sort of tagging system or look for the areas
 	//by name instead of a predefined string.
 
+	public bool enemiesArePresent = false;
+	public bool locked = false;
 	public string levelToLoad;
 
 	public bool pressToLoad;
@@ -25,7 +27,10 @@ public class LoadNewArea : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		thePlayer = FindObjectOfType<PlayerController> ();
-
+		GameObject g = GameObject.FindGameObjectWithTag ("Enemy");
+		if (!g.Equals (null)) {
+			enemiesArePresent = true;
+		}
 	}
 	
 	// Update is called once per frame
@@ -36,10 +41,18 @@ public class LoadNewArea : MonoBehaviour {
 				SceneManager.LoadScene(levelToLoad);
 			}
 		}
+		GameObject g = GameObject.FindGameObjectWithTag ("Enemy");
+		if(!(g != null)){
+			GameObject.FindGameObjectWithTag ("GlobalValueHolder").GetComponent<GlobalValueHolder> ().addDeadRoom(gameObject.scene.name);
+			GameObject[] exits = GameObject.FindGameObjectsWithTag ("Exit");
+			for (int i = 0; i < exits.Length; i++) {
+				exits [i].GetComponent<LoadNewArea> ().enemiesArePresent = false;
+			}
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D other){
-		if (!pressToLoad) {
+		if (!pressToLoad && !enemiesArePresent && !locked) {
 			if (other.gameObject.name == "Player") {
 				thePlayer.startPoint = exitPoint;
 				other.GetComponent<PlayerController> ().startPoint = exitPoint;
@@ -48,7 +61,7 @@ public class LoadNewArea : MonoBehaviour {
 			}
 		}
 		if (pressToLoad) {
-			if (other.gameObject.name == "Player" && Input.GetKeyDown (KeyCode.Space)) {
+			if (other.gameObject.name == "Player" && Input.GetKeyDown (KeyCode.Space) && !locked && !enemiesArePresent) {
 				thePlayer.startPoint = exitPoint;
 				other.GetComponent<PlayerController> ().startPoint = exitPoint;
 				Debug.Log ("Moving to point:" + thePlayer.startPoint);

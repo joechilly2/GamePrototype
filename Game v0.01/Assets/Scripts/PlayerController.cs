@@ -25,14 +25,24 @@ public class PlayerController : MonoBehaviour{
 	private static bool playerExists = false;
 
 	private bool attacking;
-	public float attackTime;
+	public float attackTime = 1f;
 	private float attackTimeCounter;
 
 	public string startPoint;
 
 	public bool invulnurable = false;
-	private float invulntime = 3f;
-	private float invulntimer = 3f;
+	private float invulntime = 1.5f;
+	private float invulntimer = 1.5f;
+
+	private bool attackingDown;
+	private bool attackingUp;
+	private bool attackingLeft;
+	private bool attackingRight;
+
+	public Collider2D boxAttackingDown;
+	public Collider2D boxAttackingUp;
+	public Collider2D boxAttackingLeft;
+	public Collider2D boxAttackingRight;
 
 	//public PlayerInteractionAreas interactions;
 	// Use this for initialization
@@ -50,11 +60,20 @@ public class PlayerController : MonoBehaviour{
 		}
 
 		lastMove = new Vector2 (0, -1f);
+
+		boxAttackingUp.gameObject.GetComponent<HurtEnemy> ().enabled = false;
+		boxAttackingDown.gameObject.GetComponent<HurtEnemy> ().enabled = false;
+		boxAttackingRight.gameObject.GetComponent<HurtEnemy> ().enabled = false;
+		boxAttackingLeft.gameObject.GetComponent<HurtEnemy> ().enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+//		Debug.Log ("Up: " + boxAttackingUp.gameObject.GetComponent<HurtEnemy> ().enabled);
+//		Debug.Log ("Down: " + boxAttackingDown.gameObject.GetComponent<HurtEnemy> ().enabled);
+//		Debug.Log ("Left: " + boxAttackingLeft.gameObject.GetComponent<HurtEnemy> ().enabled);
+//		Debug.Log ("Right: " + boxAttackingRight.gameObject.GetComponent<HurtEnemy> ().enabled);
 		if (invulnurable) {
 			invulntimer -= Time.deltaTime;
 			if (invulntimer <= 0) {
@@ -162,4 +181,45 @@ public class PlayerController : MonoBehaviour{
 		}
 		*/
 	}
+
+	public void ToggleUpBox(){
+		attackingUp = !attackingUp;
+		boxAttackingUp.gameObject.GetComponent<HurtEnemy> ().enabled = !boxAttackingUp.gameObject.GetComponent<HurtEnemy> ().enabled;
+		//Debug.Log ("AttackedUp");
+	}
+
+	public void ToggleDownBox(){
+		attackingDown = !attackingDown;
+		boxAttackingDown.gameObject.GetComponent<HurtEnemy> ().enabled = !boxAttackingDown.gameObject.GetComponent<HurtEnemy> ().enabled;
+	}
+
+	public void ToggleRightBox(){
+		attackingRight = !attackingRight;
+		boxAttackingRight.gameObject.GetComponent<HurtEnemy> ().enabled = !boxAttackingRight.gameObject.GetComponent<HurtEnemy> ().enabled;
+	}
+
+	public void ToggleLeftBox(){
+		attackingLeft = !attackingLeft;
+		boxAttackingLeft.gameObject.GetComponent<HurtEnemy> ().enabled = !boxAttackingLeft.gameObject.GetComponent<HurtEnemy> ().enabled;
+	}
+
+	public bool checkDirection(string s){
+		switch (s) {
+		case("Up"):
+			return attackingUp;
+			break;
+		case("Down"):
+			return attackingDown;
+			break;
+		case("Left"):
+			return attackingLeft;
+			break;
+		case("Right"):
+			return attackingRight;
+			break;
+		}
+		return false;
+	}
+
+
 }

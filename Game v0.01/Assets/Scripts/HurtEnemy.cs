@@ -19,23 +19,39 @@ public class HurtEnemy : MonoBehaviour {
 	public GameObject damageBurst;
 	public GameObject damageNumber;
 
+	public string direction;
+
+	private float invulnTime = 0.3f;
+	private float invulnTimer;
+	private bool isInvuln = false;
+
 	// Use this for initialization
 	void Start ()
 	{
-		
+		invulnTimer = invulnTime;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		if (isInvuln) {
+			invulnTimer -= Time.deltaTime;
+			if (invulnTimer <= 0) {
+				isInvuln = false;
+			}
+		} else {
+			invulnTimer = invulnTime;
+		}
 	}
 
-	void OnTriggerEnter2D (Collider2D other)
+	void OnTriggerStay2D (Collider2D other)
 	{
-		if (other.gameObject.tag == "Enemy") {
+		//Debug.Log (direction + ": " + gameObject.GetComponentInParent<PlayerController> ().checkDirection (direction));
+		if (other.gameObject.tag == "Enemy" && gameObject.GetComponentInParent<PlayerController>().checkDirection(direction) && !isInvuln) {
+			//Debug.Log (this.gameObject.name);
 			//Destroy (other.gameObject);
+			isInvuln = true;
 			other.gameObject.GetComponent<EnemyHealthManager> ().HurtEnemy (damageToGive);
-			other.gameObject.GetComponent<SlimeController> ().StunEnemy ();
 			Instantiate (damageBurst, other.transform.position, other.transform.rotation);
 			//Creating objects from nothing. Very Useful!!!
 			var clone = (GameObject)Instantiate (damageNumber, (new Vector3 (other.transform.position.x, other.transform.position.y + 0.4f, other.transform.position.z)), Quaternion.Euler (Vector3.zero));
