@@ -28,7 +28,7 @@ public class LoadNewArea : MonoBehaviour {
 	void Start () {
 		thePlayer = FindObjectOfType<PlayerController> ();
 		GameObject g = GameObject.FindGameObjectWithTag ("Enemy");
-		if (!g.Equals (null)) {
+    	if (!g.Equals (null)) {
 			enemiesArePresent = true;
 		}
 	}
@@ -61,7 +61,7 @@ public class LoadNewArea : MonoBehaviour {
 			}
 		}
 		if (pressToLoad) {
-			if (other.gameObject.name == "Player" && Input.GetKeyDown (KeyCode.Space) && !locked && !enemiesArePresent) {
+			if (other.gameObject.name == "Player" && Input.GetKeyDown (KeyCode.E) && !locked && !enemiesArePresent) {
 				thePlayer.startPoint = exitPoint;
 				other.GetComponent<PlayerController> ().startPoint = exitPoint;
 				Debug.Log ("Moving to point:" + thePlayer.startPoint);

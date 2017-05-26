@@ -13,6 +13,7 @@ public class HurtEnemy : MonoBehaviour {
 
 	//POSSIBLE FIX: briefly transport this gameobject across the map to a far away location then back to where
 	//It was previously to cause ontriggerenter2d to trigger again.
+	//public ArrayList currentHitEnemies = new ArrayList();
 
 	public int damageToGive;
 
@@ -21,7 +22,7 @@ public class HurtEnemy : MonoBehaviour {
 
 	public string direction;
 
-	private float invulnTime = 0.3f;
+	private float invulnTime = 0.25f;
 	private float invulnTimer;
 	private bool isInvuln = false;
 
@@ -38,6 +39,8 @@ public class HurtEnemy : MonoBehaviour {
 			invulnTimer -= Time.deltaTime;
 			if (invulnTimer <= 0) {
 				isInvuln = false;
+//				currentHitEnemies.Clear ();
+				invulnTimer = invulnTime;
 			}
 		} else {
 			invulnTimer = invulnTime;
@@ -47,7 +50,9 @@ public class HurtEnemy : MonoBehaviour {
 	void OnTriggerStay2D (Collider2D other)
 	{
 		//Debug.Log (direction + ": " + gameObject.GetComponentInParent<PlayerController> ().checkDirection (direction));
+		//bool isHit = currentHitEnemies.Contains(other.gameObject);
 		if (other.gameObject.tag == "Enemy" && gameObject.GetComponentInParent<PlayerController>().checkDirection(direction) && !isInvuln) {
+			//currentHitEnemies.Add(other.gameObject);
 			//Debug.Log (this.gameObject.name);
 			//Destroy (other.gameObject);
 			isInvuln = true;
@@ -56,7 +61,9 @@ public class HurtEnemy : MonoBehaviour {
 			//Creating objects from nothing. Very Useful!!!
 			var clone = (GameObject)Instantiate (damageNumber, (new Vector3 (other.transform.position.x, other.transform.position.y + 0.4f, other.transform.position.z)), Quaternion.Euler (Vector3.zero));
 			clone.GetComponent<FloatingNumbers> ().damageNumber = damageToGive;
-			gameObject.GetComponent<SkeletonController> ().StunEnemy();
+			if (other.name == "Skeleton") {
+				other.GetComponent<SkeletonController> ().StunEnemy ();
+			}
 		}
 	}
 }

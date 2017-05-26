@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GlobalValueHolder : MonoBehaviour {
 
-	public string[] deadRooms = new string[5];
+	public string[] deadRooms = new string[10];
 	private int currentDeadRoomsRover = 0;
 
 	public LoadNewArea dungeonLock;
@@ -23,7 +23,7 @@ public class GlobalValueHolder : MonoBehaviour {
 	public OpenChest thirdRoomChest;
 	public bool thirdRoomChestOpened;
 
-	private int healthPotions = 0;
+	public int healthPotions = 0;
 
 	void Start () {
 	}
@@ -39,20 +39,40 @@ public class GlobalValueHolder : MonoBehaviour {
 				}
 			}
 		}
-		dungeonLock = GameObject.Find ("Dungeon1 Entry").GetComponent<LoadNewArea>();
-		dungeonLock.locked = dungeonLockBool;
+		GameObject test = GameObject.Find ("Dungeon1 Entry");
+			
+		if (test != null) {
+			dungeonLock = GameObject.Find ("Dungeon1 Entry").GetComponent<LoadNewArea> ();
+			dungeonLock.locked = dungeonLockBool;
+		}
 
-		thirdRoomLock = GameObject.Find ("ThirdRoom Entry").GetComponent<LoadNewArea>();
-		thirdRoomLock.locked = thirdRoomLockBool;
+		test = GameObject.Find ("ThirdRoom Entry");
 
-		armorRoomLock = GameObject.Find ("ArmorRoom Entry").GetComponent<LoadNewArea>();
-		armorRoomLock.locked = armorRoomLockBool;
+		if (test != null) {
+			thirdRoomLock = GameObject.Find ("ThirdRoom Entry").GetComponent<LoadNewArea> ();
+			thirdRoomLock.locked = thirdRoomLockBool;
+		}
 
-		spawnChest = GameObject.Find ("SpawnChest").GetComponent<OpenChest> ();
-		spawnChest.hasHealthPotion = !spawnChestOpened;
+		test = GameObject.Find ("ArmorRoom Entry");
 
-		thirdRoomChest = GameObject.Find ("ThirdRoomChest").GetComponent<OpenChest> ();
-		thirdRoomChest.hasHealthPotion = !thirdRoomChestOpened;
+		if (test != null) {
+			armorRoomLock = GameObject.Find ("ArmorRoom Entry").GetComponent<LoadNewArea> ();
+			armorRoomLock.locked = armorRoomLockBool;
+		}
+
+		test = GameObject.Find ("SpawnChest");
+
+		if (test != null) {
+			spawnChest = GameObject.Find ("SpawnChest").GetComponent<OpenChest> ();
+			spawnChest.hasHealthPotion = !spawnChestOpened;
+		}
+
+		test = GameObject.Find ("ThirdRoomChest");
+
+		if (test != null) {
+			thirdRoomChest = GameObject.Find ("ThirdRoomChest").GetComponent<OpenChest> ();
+			thirdRoomChest.hasHealthPotion = !thirdRoomChestOpened;
+		}
 
 	}
 

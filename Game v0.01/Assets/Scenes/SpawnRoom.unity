@@ -1043,7 +1043,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba17092d22ecf940a57cebb1773ac1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: The chest is empty...
+  dialogue: You find a health potion in the chest!
+  dialogLines:
+  - You find a health potion in the chest!
+  currentLine: -1
 --- !u!61 &946672651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1124,6 +1127,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114598812254899078, guid: 5ecbf2f3b951abb4080d433824c6b518,
+        type: 2}
+      propertyPath: deadRooms.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 60519243324711372, guid: 5ecbf2f3b951abb4080d433824c6b518,
         type: 2}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size

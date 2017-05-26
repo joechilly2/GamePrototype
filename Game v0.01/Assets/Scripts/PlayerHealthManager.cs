@@ -22,10 +22,12 @@ public class PlayerHealthManager : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown (KeyCode.LeftShift)) {
-			GameObject.FindGameObjectWithTag ("GlobalValueHolder").GetComponent<GlobalValueHolder> ().UseHealthPotion ();
-			playerCurrentHealth += 50;
-			if (playerCurrentHealth > playerMaxHealth) {
-				playerCurrentHealth = playerMaxHealth;
+			if (GameObject.FindGameObjectWithTag ("GlobalValueHolder").GetComponent<GlobalValueHolder> ().GetHealthPotions() >= 1) {
+				GameObject.FindGameObjectWithTag ("GlobalValueHolder").GetComponent<GlobalValueHolder> ().UseHealthPotion ();
+				playerCurrentHealth += 50;
+				if (playerCurrentHealth > playerMaxHealth) {
+					playerCurrentHealth = playerMaxHealth;
+				}
 			}
 		}
 

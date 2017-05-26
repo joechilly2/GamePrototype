@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f71da23e1f80488cc006079157bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 30
+  damageToGive: 50
 --- !u!114 &114698766252946014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger: {fileID: 61127282709600632}
   collisionn: {fileID: 0}
-  moveSpeed: 5
+  moveSpeed: 6
   timeBetweenMove: 2
   timeToMove: 1
   waitToReload: 3

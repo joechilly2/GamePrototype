@@ -186,6 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acdc54d7c711234eb853dedcb5064ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemiesArePresent: 0
+  locked: 0
   levelToLoad: Hall1
   pressToLoad: 0
   exitPoint: LockedRoomOut
@@ -236,6 +238,8 @@ GameObject:
   m_Component:
   - component: {fileID: 797859315}
   - component: {fileID: 797859314}
+  - component: {fileID: 797859317}
+  - component: {fileID: 797859316}
   m_Layer: 0
   m_Name: armorstand
   m_TagString: Untagged
@@ -296,6 +300,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &797859316
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 797859313}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.080732346, y: -0.19197106}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1180592, y: 2.1317763}
+  m_EdgeRadius: 0
+--- !u!114 &797859317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 797859313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba17092d22ecf940a57cebb1773ac1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 
+  dialogLines:
+  - You see a small engraved metal plate near the bottom of the armor stand. It reads...
+  - The Armor of Knight Richard
+  currentLine: -1
 --- !u!1 &1113985674
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +529,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1507908558}
   - component: {fileID: 1507908557}
+  - component: {fileID: 1507908559}
+  - component: {fileID: 1507908560}
   m_Layer: 0
   m_Name: armorstand (1)
   m_TagString: Untagged
@@ -544,3 +591,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507908559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507908556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba17092d22ecf940a57cebb1773ac1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 
+  dialogLines:
+  - You see a small engraved metal plate near the bottom of the armor stand. It reads...
+  - The Armor of Knight Andrew
+  currentLine: -1
+--- !u!61 &1507908560
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507908556}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.080732346, y: -0.19197106}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1180592, y: 2.1317763}
+  m_EdgeRadius: 0

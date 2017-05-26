@@ -12,6 +12,9 @@ public class DialogueHolder : MonoBehaviour {
 	public string dialogue;
 	private DialogueManager dMan;
 
+	public string[] dialogLines;
+	public int currentLine = -1;
+
 	private bool inArea;
 
 	// Use this for initialization
@@ -22,16 +25,26 @@ public class DialogueHolder : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (dMan.dBox.activeInHierarchy && Input.GetKeyDown (KeyCode.Space) && inArea) {
+		if (dMan.dBox.activeInHierarchy && Input.GetKeyDown (KeyCode.E) && inArea && currentLine+1 >= dialogLines.Length) {
 			dMan.dBox.SetActive (false);
-
+			currentLine = -1;
 		}
-		else if (Input.GetKeyDown (KeyCode.E) && !dMan.dBox.activeInHierarchy && inArea) {
+
+		else if (Input.GetKeyDown (KeyCode.E) && !dMan.dBox.activeInHierarchy && inArea && currentLine < dialogLines.Length) {
+			//For Chests...
 			if (this.gameObject.GetComponent<OpenChest> () != null) {
-				Debug.Log ("Test");
 				this.gameObject.GetComponent<OpenChest> ().SetOpenChest (true);
 			}
-			dMan.ShowBox (dialogue);
+			currentLine++;
+			dMan.ShowBox (dialogLines[currentLine]);
+		}
+		else if(Input.GetKeyDown (KeyCode.E) && dMan.dBox.activeInHierarchy && inArea && currentLine < dialogLines.Length){
+			//For Chests...
+			if (this.gameObject.GetComponent<OpenChest> () != null) {
+				this.gameObject.GetComponent<OpenChest> ().SetOpenChest (true);
+			}
+			currentLine++;
+			dMan.ShowBox (dialogLines[currentLine]);
 		}
 	}
 
@@ -45,6 +58,14 @@ public class DialogueHolder : MonoBehaviour {
 		if (other.gameObject.name == "Player") {
 			inArea = false;
 			dMan.dBox.SetActive (false);
+			currentLine = 0;
 		}
+	}
+
+	public bool hasNextLine(){
+		if (dialogLines [currentLine + 1] != null) {
+			return true;
+		}
+		return false;
 	}
 }
