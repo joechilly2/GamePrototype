@@ -21,6 +21,14 @@ public class PlayerHealthManager : MonoBehaviour {
 			gameObject.SetActive (false);
 		}
 
+		if (Input.GetKeyDown (KeyCode.LeftShift)) {
+			GameObject.FindGameObjectWithTag ("GlobalValueHolder").GetComponent<GlobalValueHolder> ().UseHealthPotion ();
+			playerCurrentHealth += 50;
+			if (playerCurrentHealth > playerMaxHealth) {
+				playerCurrentHealth = playerMaxHealth;
+			}
+		}
+
 	}
 
 

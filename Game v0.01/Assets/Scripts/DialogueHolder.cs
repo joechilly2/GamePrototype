@@ -26,7 +26,7 @@ public class DialogueHolder : MonoBehaviour {
 			dMan.dBox.SetActive (false);
 
 		}
-		else if (Input.GetKeyDown (KeyCode.Space) && !dMan.dBox.activeInHierarchy && inArea) {
+		else if (Input.GetKeyDown (KeyCode.E) && !dMan.dBox.activeInHierarchy && inArea) {
 			if (this.gameObject.GetComponent<OpenChest> () != null) {
 				Debug.Log ("Test");
 				this.gameObject.GetComponent<OpenChest> ().SetOpenChest (true);

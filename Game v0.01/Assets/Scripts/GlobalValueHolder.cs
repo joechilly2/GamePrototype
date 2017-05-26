@@ -17,6 +17,14 @@ public class GlobalValueHolder : MonoBehaviour {
 	public LoadNewArea armorRoomLock;
 	public bool armorRoomLockBool = true;
 
+	public OpenChest spawnChest;
+	public bool spawnChestOpened;
+
+	public OpenChest thirdRoomChest;
+	public bool thirdRoomChestOpened;
+
+	private int healthPotions = 0;
+
 	void Start () {
 	}
 	
@@ -40,6 +48,11 @@ public class GlobalValueHolder : MonoBehaviour {
 		armorRoomLock = GameObject.Find ("ArmorRoom Entry").GetComponent<LoadNewArea>();
 		armorRoomLock.locked = armorRoomLockBool;
 
+		spawnChest = GameObject.Find ("SpawnChest").GetComponent<OpenChest> ();
+		spawnChest.hasHealthPotion = !spawnChestOpened;
+
+		thirdRoomChest = GameObject.Find ("ThirdRoomChest").GetComponent<OpenChest> ();
+		thirdRoomChest.hasHealthPotion = !thirdRoomChestOpened;
 
 	}
 
@@ -65,6 +78,33 @@ public class GlobalValueHolder : MonoBehaviour {
 		}
 		else if (s == "ArmorRoom") {
 			armorRoomLockBool = false;
+		}
+	}
+
+	public int GetHealthPotions(){
+		return healthPotions;
+	}
+
+	public void AddHealthPotion(){
+		healthPotions += 1;
+	}
+
+	public bool UseHealthPotion(){
+		if (healthPotions >= 1) {
+			healthPotions -= 1;
+			return true;
+		}
+		return false;
+	}
+
+	public void SetFalseHealthPotion(string s){
+		if(s=="SpawnChest"){
+			spawnChest.hasHealthPotion = false;
+			spawnChestOpened = true;
+		}
+		else if(s=="ThirdRoomChest"){
+			thirdRoomChest.hasHealthPotion = false;
+			thirdRoomChestOpened = true;
 		}
 	}
 }

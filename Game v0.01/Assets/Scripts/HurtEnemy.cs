@@ -56,6 +56,7 @@ public class HurtEnemy : MonoBehaviour {
 			//Creating objects from nothing. Very Useful!!!
 			var clone = (GameObject)Instantiate (damageNumber, (new Vector3 (other.transform.position.x, other.transform.position.y + 0.4f, other.transform.position.z)), Quaternion.Euler (Vector3.zero));
 			clone.GetComponent<FloatingNumbers> ().damageNumber = damageToGive;
+			gameObject.GetComponent<SkeletonController> ().StunEnemy();
 		}
 	}
 }

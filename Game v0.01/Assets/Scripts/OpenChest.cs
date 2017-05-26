@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenChest : MonoBehaviour {
 
 	public string key;
+	public bool hasHealthPotion;
 
 	private bool open;
 	private Animator anim;
@@ -21,6 +22,11 @@ public class OpenChest : MonoBehaviour {
 			anim.SetBool ("ChestOpen", open);
 			if (key != "") {
 				GameObject.FindGameObjectWithTag ("GlobalValueHolder").GetComponent<GlobalValueHolder> ().UnlockRoom (key);
+			}
+			if (hasHealthPotion) {
+				GameObject.FindGameObjectWithTag ("GlobalValueHolder").GetComponent<GlobalValueHolder> ().AddHealthPotion ();
+				GameObject.FindGameObjectWithTag ("GlobalValueHolder").GetComponent<GlobalValueHolder> ().spawnChestOpened = true;
+				hasHealthPotion = false;
 			}
 		}
 	}
