@@ -32,4 +32,8 @@ public class DialogueManager : MonoBehaviour {
 		dText.text = dialogue;
 	}
 
+	public void CloseBox(){
+		dBox.SetActive (false);
+	}
+
 }

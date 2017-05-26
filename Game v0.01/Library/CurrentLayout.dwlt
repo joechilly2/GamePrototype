@@ -107,10 +107,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 948
-  m_MinSize: {x: 709, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 711, y: 492}
+  m_MaxSize: {x: 18006, y: 14042}
   vertical: 0
-  controlID: 47
+  controlID: 11
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 48
+  controlID: 12
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -214,7 +214,7 @@ MonoBehaviour:
   - {fileID: 17}
   - {fileID: 18}
   m_Selected: 3
-  m_LastSelected: 1
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,8 +233,8 @@ MonoBehaviour:
     y: 0
     width: 399
     height: 948
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -344,9 +344,9 @@ MonoBehaviour:
     height: 927
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0e1f0200
-    m_LastClickedID: 139022
-    m_ExpandedIDs: c6a3f8ffc8a3f8ff36eef8fff600f9fff800f9ff3203f9ff1871f9ffd675f9ff2279f9ffac7cf9ff8481f9ff0293f9ff2e9ef9ff309ef9ff329ef9ffbcb8f9ff12c6f9ff8c0afaffae18faff1c25faff883cfaff30a0fbff70b4fbff40c9fbff62c9fbff64c9fbff566cfcffc86dfcffa86efcff0e73fcfff876fcffd0eafcff2aedfcff6cf2fcff6ef2fcff9444fdff82d9fdffaedefdff885cfeff566efeffb070feffe6adfeff90c4feff06c8feff30ccfeff60d3feff6a0bffff7c24ffffe630ffff2243ffffba48ffff10efffffd0effffff2f5ffffe6fbfffff4ffffff00000000a43f0000ae750000d075000026760000349b0000569b0000de9f00009cbc0000285701004e570100a45c0100165d01003a5d010052d10100a4e9010054f10100d4040200e41e0200
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 3e6dfdff306efdff106ffdff6270fdff0c71fdffb471fdffae72fdffb272fdffa873fdff8c74fdff3275fdffe475fdff0e77fdffcc78fdff467afdff4c7afdffda89fdff908cfdff828dfdff608efdffb28ffdff5c90fdff0491fdfffe91fdff4c92fdff4293fdff2694fdffce94fdff8095fdffae96fdff6c98fdfff899fdfffe99fdffe69bfdff749cfdff529dfdffa49efdff4e9ffdfff69ffdfff0a0fdff3ea1fdff34a2fdff18a3fdffc0a3fdff72a4fdffa0a5fdff5ea7fdffeaa8fdfff0a8fdffacaafdffbecdfdffbad5fdff48d6fdff28d7fdff7ad8fdff24d9fdffccd9fdffc6dafdff14dbfdff0adcfdffeedcfdff96ddfdff48defdff76dffdff34e1fdff38e1fdff3ee1fdff58e8fdff2418feffb433feff1c3dfeff5a40feff4e44feff504dfeff0251feff2454feffe456feff5a96feff5e97fefff497feff74a4feff1efefeff4004ffff8205ffffb807ffff500cffff980dffff765effffa45effffa85effff685fffffca6fffff6e7bffff9ea3ffff28a4ffff54a6fffffea6ffffa6a7ffffa0a8ffffeea8ffffe4a9ffffc8aaffff70abffff22acffff50adffff0eafffff12afffffc8b0ffff52b1ffff7eb3ffff28b4ffffd0b4ffffcab5ffff18b6ffff0eb7fffff2b7ffff9ab8ffff4cb9ffff7abaffff38bcffff3cbcffffa8d1ffff32d2ffff5ed4ffff08d5ffffb0d5ffffaad6fffff8d6ffffeed7ffffd2d8ffff7ad9ffff2cdaffff5adbffff18ddffff1cddffff16e6fffffee6ffff2ae9ffffd4e9ffff7ceaffff76ebffffc4ebffffbaecffff9eedffff46eeffff06efffff34f0fffff2f1fffff6f1ffff2ef8ffff5cf8ffff60f8ffff20f9ffffe6fbfffff4ffffff00000000c654000098550000ce550000ec5500004c630000fc6300003264000000b600009eba0000c4ba00002add000046f3000096130100bc130100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -365,7 +365,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
   m_ExpandedScenes:
-  - ThroneRoom
+  - Dungeon1
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -396,14 +396,14 @@ MonoBehaviour:
     width: 1262
     height: 614
   m_SceneLighting: 0
-  lastFramingTime: 333.1639569473804
+  lastFramingTime: 6170.754242608843
   m_2DMode: 1
   m_isRotationLocked: 1
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 17.712528, y: -8.601535, z: 0}
+    m_Target: {x: 15.5435705, y: -12.837256, z: 0}
     speed: 2
-    m_Value: {x: 17.712528, y: -8.601535, z: 0}
+    m_Value: {x: 15.5435705, y: -12.837256, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -430,9 +430,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 11.027756
+    m_Target: 10.142528
     speed: 2
-    m_Value: 11.027756
+    m_Value: 10.142528
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -643,18 +643,18 @@ MonoBehaviour:
     m_ExpandedIDs: 000000002e250000ce36000096370000ba37000018390000f239000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scenes
-      m_OriginalName: Scenes
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 14486
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
@@ -695,19 +695,19 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 5a22000064220000642400005c240000c4230000501400002414ffff0a320000ec310000f2230000d2230000c6230000f63200009c320000302400002e3800006ed7fcff00000000f88d000064370000ae62feff6a2c0000c474fcff5a250000fe5effff547ffeff7aecfbff103a0000fc250000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ThirdRoom
-      m_OriginalName: ThirdRoom
+      m_Name: DeathScreenCleanup
+      m_OriginalName: DeathScreenCleanup
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 14864
+      m_UserData: 55630
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0

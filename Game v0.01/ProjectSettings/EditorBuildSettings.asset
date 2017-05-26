@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: fa29bc8a7e51a0140986da024586591a
+  - enabled: 1
     path: Assets/Scenes/SpawnRoom.unity
     guid: 3b7ace0663820fa4bb0cb6e2b1008e2b
   - enabled: 1
@@ -41,3 +44,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ThroneRoom.unity
     guid: 070e1e65ca96f1e4a8fab9861b0e47b3
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: c581e906d16dc0c4da6882659d4f7746

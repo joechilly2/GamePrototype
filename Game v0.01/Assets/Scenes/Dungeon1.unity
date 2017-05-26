@@ -1353,6 +1353,8 @@ GameObject:
   m_Component:
   - component: {fileID: 613631238}
   - component: {fileID: 613631239}
+  - component: {fileID: 613631240}
+  - component: {fileID: 613631241}
   m_Layer: 0
   m_Name: jaildoor
   m_TagString: Untagged
@@ -1413,6 +1415,46 @@ SpriteRenderer:
   m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+--- !u!61 &613631240
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 613631237}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.95053005}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.66361046}
+  m_EdgeRadius: 0
+--- !u!114 &613631241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 613631237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba17092d22ecf940a57cebb1773ac1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: 
+  dialogLines:
+  - The door wont budge...
+  currentLine: -1
 --- !u!1001 &648612960
 Prefab:
   m_ObjectHideFlags: 0
@@ -1422,11 +1464,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4561074463749054, guid: 4a9f97e063d8c8a4ea62558c88a1e4e3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 13.88
+      value: 15.95
       objectReference: {fileID: 0}
     - target: {fileID: 4561074463749054, guid: 4a9f97e063d8c8a4ea62558c88a1e4e3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -9.37
+      value: -9.93
       objectReference: {fileID: 0}
     - target: {fileID: 4561074463749054, guid: 4a9f97e063d8c8a4ea62558c88a1e4e3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2421,11 +2463,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4561074463749054, guid: 4a9f97e063d8c8a4ea62558c88a1e4e3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12.308148
+      value: 11.38
       objectReference: {fileID: 0}
     - target: {fileID: 4561074463749054, guid: 4a9f97e063d8c8a4ea62558c88a1e4e3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -14.1806555
+      value: -15.4
       objectReference: {fileID: 0}
     - target: {fileID: 4561074463749054, guid: 4a9f97e063d8c8a4ea62558c88a1e4e3, type: 2}
       propertyPath: m_LocalPosition.z

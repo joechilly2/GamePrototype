@@ -67,7 +67,14 @@ public class LoadNewArea : MonoBehaviour {
 				Debug.Log ("Moving to point:" + thePlayer.startPoint);
 				SceneManager.LoadScene(levelToLoad);
 			}
+			else if(other.gameObject.name == "Player" && Input.GetKeyDown (KeyCode.E) && locked){
+				GameObject.Find ("DialogueManager").GetComponent<DialogueManager>().ShowBox("This room is locked!");
+			}
 		}
+	}
+
+	void OnTriggerExit2D(Collider2D other){
+		GameObject.Find ("DialogueManager").GetComponent<DialogueManager> ().CloseBox ();
 	}
 
 	void InitiateLevelSwap(){
